@@ -27,7 +27,7 @@ export async function handler(event, context) {
           permalink: url,
           description: info.description,
           source: format.url.replace(/&/g, '&amp;'),
-          size: format.contentLength,
+          size: format.clen,
           id: info.video_id,
           updated: date.toUTCString(),
         };
