@@ -30,7 +30,6 @@ export async function handler(event, context) {
           id: info.video_id,
           updated: date.toUTCString(),
         };
-        console.log(format);
         const item = `<item>
         <title>${video.title}</title>
         <link>${video.permalink}</link>
@@ -47,7 +46,7 @@ export async function handler(event, context) {
         <channel>
             <title>${podcast.title}</title>
             <link>${podcast.feed}</link>
-            <description>${podcast.desc}</description>
+            <description>${podcast.description}</description>
             <atom:link href="${
               podcast.feed
             }" rel="self" type="application/rss+xml"></atom:link>
