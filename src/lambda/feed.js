@@ -20,14 +20,14 @@ export async function handler(event, context) {
     });
     const descriptions = await Promise.all(
       urls.map(async url => {
-        const info = await ytdl.getBasicInfo(url);
+        const info = await ytdl.getInfo(url);
         const format = ytdl.chooseFormat(info.formats, { quality: 140 });
         const video = {
           title: info.title,
           permalink: url,
           description: info.description,
           source: format.url.replace(/&/g, '&amp;'),
-          size: format.clen,
+          size: format.contentLength,
           id: info.video_id,
           updated: date.toUTCString(),
         };
