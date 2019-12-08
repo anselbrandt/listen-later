@@ -8,6 +8,7 @@ export async function handler(event, context) {
     const date = new Date();
     const podcast = {
       title: playlist.title,
+      url: 'https://listenlater.netlify.com',
       feed: `https://listenlater.netlify.com/.netlify/functions/${id}`,
       description: playlist.description,
       email: 'mail@me.com',
@@ -45,7 +46,7 @@ export async function handler(event, context) {
     <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0">
         <channel>
             <title>${podcast.title}</title>
-            <link>${podcast.feed}</link>
+            <link>${podcast.url}</link>
             <description>${podcast.description}</description>
             <atom:link href="${
               podcast.feed
@@ -64,7 +65,7 @@ export async function handler(event, context) {
             <image>
                 <url>${podcast.image}</url>
                 <title>${podcast.title}</title>
-                <link>${podcast.feed}</link>
+                <link>${podcast.url}</link>
             </image>
             ${descriptions.join('')}
         </channel>
