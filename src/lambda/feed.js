@@ -70,8 +70,8 @@ export async function handler(event, context) {
             ${descriptions.join('')}
         </channel>
     </rss>`;
-    //const contentType = 'text/xml';
-    const contentType = 'text';
+    const contentType = 'text/xml';
+    //const contentType = 'text';
     return {
       statusCode: 200,
       headers: {
