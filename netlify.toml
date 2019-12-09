@@ -9,6 +9,6 @@
   status = 200
 
   [[redirects]]
-  from = "/test/"
+  from = "/test/*"
   to = "/.netlify/functions/test/"
   status = 200

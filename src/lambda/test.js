@@ -3,7 +3,7 @@ import ytdl from 'ytdl-core';
 
 export async function handler(event, context) {
   try {
-    const id = 'PLNfjgyhQqUxabn9GB83ZfHpOULCK9Zlpi';
+    const id = event.path.split('/').pop();
     const playlist = await ytpl(id);
     const urls = playlist.items.map(item => {
       return item.url_simple;
@@ -18,6 +18,7 @@ export async function handler(event, context) {
     );
     const results = `
     Playlist title: ${playlist ? playlist.title : 'Playlist fetch failed'}
+    https://www.youtube.com/playlist?list=${id}
 
     ${descriptions.join('\n\n    ')}`;
     const contentType = 'text';
