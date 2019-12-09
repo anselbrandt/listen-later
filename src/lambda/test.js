@@ -12,7 +12,7 @@ export async function handler(event, context) {
       urls.map(async url => {
         const info = await ytdl.getInfo(url);
         const format = ytdl.chooseFormat(info.formats, { quality: 140 });
-        const item = `${info.title}\n\n    ${format.url}`;
+        const item = `${info.title}\n    ${url}\n\n    ${format.url}`;
         return item;
       }),
     );
