@@ -8,6 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
+      <a href="https://listenlater.netlify.com">Get started!</a>
     </div>
   );
 }
