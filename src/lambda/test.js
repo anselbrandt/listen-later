@@ -12,13 +12,14 @@ export async function handler(event, context) {
       urls.map(async url => {
         const info = await ytdl.getInfo(url);
         const format = ytdl.chooseFormat(info.formats, { quality: 140 });
-        const item = `${info.title}`;
+        const item = `${info.title}\n\n    ${format.url}`;
         return item;
       }),
     );
     const results = `
-    ${playlist ? playlist.title : 'Playlist fetch failed'}
-    ${descriptions.join('\n    ')}`;
+    Playlist title: ${playlist ? playlist.title : 'Playlist fetch failed'}
+
+    ${descriptions.join('\n\n    ')}`;
     const contentType = 'text';
     return {
       statusCode: 200,
