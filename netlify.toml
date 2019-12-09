@@ -7,3 +7,8 @@
   from = "/feeds/*"
   to = "/.netlify/functions/feed/"
   status = 200
+
+  [[redirects]]
+  from = "/test/"
+  to = "/.netlify/functions/test/"
+  status = 200
