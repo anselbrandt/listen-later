@@ -18,11 +18,12 @@ export default function Footer() {
             <a href="https://www.himalaya.com">Himalaya</a>, and probably any
             Android podcast app.
           </li>
+          <br></br>
+          <li>
+            View the code on{' '}
+            <a href="https://github.com/anselbrandt/listen-later">GitHub</a>
+          </li>
         </ul>
-        <div>
-          View the code on{' '}
-          <a href="https://github.com/anselbrandt/listen-later">GitHub</a>
-        </div>
       </div>
     </div>
   );
