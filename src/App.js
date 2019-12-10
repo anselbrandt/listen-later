@@ -9,7 +9,6 @@ import Footer from './Footer';
 function App() {
   const [userInput, setUserInput] = useState();
   const [submittedInput, setSubmittedInput] = useState();
-  const [playlistURL, setPlaylistURL] = useState();
   const [feedURL, setFeedURL] = useState('Podcast feed URL');
 
   const { isValid } = useValidator(submittedInput);
