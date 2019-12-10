@@ -5,6 +5,7 @@ export async function handler(event, context) {
   try {
     const id = event.path.split('/').pop();
     const playlist = await ytpl(id);
+    console.log('Playlist name: ' + playlist.title);
     const date = new Date();
     const podcast = {
       title: playlist.title,
@@ -21,6 +22,7 @@ export async function handler(event, context) {
     const descriptions = await Promise.all(
       urls.map(async url => {
         const info = await ytdl.getInfo(url);
+        console.log(info.title);
         const format = ytdl.chooseFormat(info.formats, { quality: 140 });
         const video = {
           title: info.title,
