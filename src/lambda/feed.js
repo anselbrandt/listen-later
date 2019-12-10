@@ -5,7 +5,8 @@ export async function handler(event, context) {
   try {
     const id = event.path.split('/').pop();
     const playlist = await ytpl(id);
-    console.log('Playlist name: ' + playlist.title);
+    console.log(playlist.title);
+    console.log(playlist.url);
     const date = new Date();
     const podcast = {
       title: playlist.title,
