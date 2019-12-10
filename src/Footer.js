@@ -19,6 +19,10 @@ export default function Footer() {
             Android podcast app.
           </li>
         </ul>
+        <div>
+          View the code on{' '}
+          <a href="https://github.com/anselbrandt/listen-later">GitHub</a>
+        </div>
       </div>
     </div>
   );
