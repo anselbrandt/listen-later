@@ -12,7 +12,12 @@ export default function Footer() {
             Unfortunately, there are playback issues with the native iOS and Mac
             Podcast App.
           </li>
-          <li></li>
+          <li>
+            Works with <a href="https://overcast.fm">Overcast</a>,{' '}
+            <a href="https://castro.fm">Castro</a>,{' '}
+            <a href="https://www.himalaya.com">Himalaya</a>, and probably any
+            Android podcast app.
+          </li>
         </ul>
       </div>
     </div>
