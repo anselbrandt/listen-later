@@ -29,7 +29,7 @@ export async function handler(event, context) {
           title: info.title,
           permalink: url,
           description: info.description,
-          source: format.url.replace(/&/g, '&amp;'),
+          source: `https://listenlater.netlify.com/audio/${info.video_id}`,
           size: format.contentLength,
           id: info.video_id,
           updated: date.toUTCString(),
