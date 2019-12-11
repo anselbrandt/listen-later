@@ -27,9 +27,9 @@ function App() {
 
   useEffect(() => {
     if (submittedInput && isValid) {
-      setFeedURL(
-        `https://listenlater.netlify.com/feeds/${submittedInput.split('=')[1]}`,
-      );
+      const params = submittedInput.split('=')[1];
+      const id = params.split('&')[0];
+      setFeedURL(`https://listenlater.netlify.com/feeds/${id}`);
     } else {
       setFeedURL('Podcast feed URL');
     }
